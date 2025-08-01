@@ -1,0 +1,61 @@
+@import url (".config/colors.css");
+* {
+    all: unset;
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+#window {
+    background-color: @primary;
+    border-radius: 10px;
+}
+
+#input {
+    margin-top: -70px;
+}
+
+#entry{
+    min-width: 80px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    padding: 7px 0;
+    border-radius: 20px;
+    background-color: @dark_gray;
+    color: @aqua;
+    transition: box-shadow 0.2s;
+}
+
+#entry:selected {
+    box-shadow: 0px 0px 1px 2px @aqua;
+}
+
+#entry:first-child {
+    margin-left: 10px;
+}
+
+#entry:first-child #text {
+    padding-left: 15px;
+}
+
+#entry:nth-child(2) #text {
+    padding-left: 21px;
+}
+
+#entry:nth-child(3) #text {
+    padding-left: 18px;
+}
+
+#entry:nth-child(4) #text {
+    padding-left: 17px;
+}
+
+#entry:last-child #text {
+    padding-left: 25px;
+}
+
+#entry:last-child {
+    margin-right: 10px;
+}

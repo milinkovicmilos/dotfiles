@@ -1,0 +1,56 @@
+@import url(".config/colors.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: JetBransMono Nerd Font;
+    font-size: 16px;
+    border-radius: 0;
+}
+
+#window {
+    background-color: @primary;
+    border: 1px solid @dark_gray;
+    border-radius: 3px;
+}
+
+#outer-box {
+    padding: 10px;
+}
+
+#input {
+    margin: 5px 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid @dark_gray;
+    box-shadow: none;
+    color: @aqua;
+}
+
+#input:first-child> :nth-child(1) {
+    padding: 5px;
+    color: @dark_gray;
+}
+
+#inner-box {
+    color: yellow;
+}
+
+#entry {
+    padding: 3px;
+    margin: 2px 0;
+    color: @white;
+}
+
+#entry:selected {
+    background-color: @dark_gray;
+    color: @aqua;
+}
+
+#entry:selected #text {
+    color: @aqua;
+}
+
+#expander-box {
+    background-color: @obsidian;
+}
