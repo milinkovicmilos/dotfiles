@@ -9,7 +9,7 @@ if [[ $PID_COUNT != 1 ]]; then
 fi
 
 OPTION_STRING="\n\n\n\n"
-SELECTED=$(echo -e $OPTION_STRING | wofi --dmenu -k /dev/null -c ~/.config/wofi/power-menu-config.conf -s ~/.config/wofi/power-menu-style.css)
+SELECTED=$(echo -e $OPTION_STRING | wofi --dmenu -k /dev/null -c $HOME/.config/wofi/power-menu-config.conf -s $HOME/.config/wofi/power-menu-style.css)
 
 case $SELECTED in
     "")

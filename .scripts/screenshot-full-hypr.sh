@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Declare paths for images
-IMGPATH=/home/rey/ScreenShots/$(date +'%s_grim.png')
+IMGPATH="$HOME/ScreenShots/$(date +'%s_grim.png')"
 
 # Get focused monitor
-FOCUSED=$(hyprctl monitors -j | /home/rey/Scripts/getactivemonitor.py)
+FOCUSED=$(hyprctl monitors -j | $HOME/.scripts/getactivemonitor.py)
 
 # Take a screenshot of focused monitor
 grim -o $FOCUSED $IMGPATH
