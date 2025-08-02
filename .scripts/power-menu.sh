@@ -4,8 +4,7 @@ PROCESS_NAME="/bin/bash $0"
 PID_COUNT=$(pgrep -xfc "$PROCESS_NAME")
 
 if [[ $PID_COUNT != 1 ]]; then
-	echo "killit"
-	exit
+    exit
 fi
 
 OPTION_STRING="\n\n\n\n"
@@ -13,15 +12,15 @@ SELECTED=$(echo -e $OPTION_STRING | wofi --dmenu -k /dev/null -c $HOME/.config/w
 
 case $SELECTED in
     "")
-	swaymsg exit
-	;;
+    hyprctl dispatch exit
+    ;;
     "")
-	systemctl suspend
-	;;
+    systemctl suspend
+    ;;
     "")
-	systemctl reboot
-	;;
+    systemctl reboot
+    ;;
     "")
-	systemctl poweroff
-	;;
+    systemctl poweroff
+    ;;
 esac
