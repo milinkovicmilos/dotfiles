@@ -59,9 +59,16 @@ make_config_links() {
     home_config_dir="$HOME/.config"
     check_home_config_files "$dotfiles_config_dir" "$home_config_dir"
 
-    for target_dir in $dotfiles_config_dir/*; do
+    for target_dir in "$dotfiles_config_dir"/*; do
         source_dir=$home_config_dir/$(basename $target_dir)
-        echo "ln -s $target_dir $source_dir"
+        ln -s "$target_dir" "$source_dir"
+
+        if [ $? -eq 0 ]; then
+            echo "Successfully linked $source_dir to dotfile config $target_dir"
+        else
+            echo "Failed to link $source_dir to $target_dir. Aborting."
+            exit 1
+        fi
     done
 }
 
@@ -94,6 +101,14 @@ make_scripts_link() {
             esac
         done
     fi
+
+    ln -s "$dotfiles_scripts_dir" "$home_scripts_dir"
+    if [ $? -eq 0 ]; then
+        echo "Successfully linked $home_scripts_dir to dotfile dir $dotfiles_scripts_dir"
+    else
+        echo "Failed to link $home_scripts_dir to $dotfiles_scripts_dir. Aborting."
+        exit 1
+    fi
 }
 
 make_wallpapers_link() {
@@ -124,6 +139,14 @@ make_wallpapers_link() {
                     ;;
             esac
         done
+    fi
+
+    ln -s "$dotfiles_wallpapers_dir" "$home_wallpapers_dir"
+    if [ $? -eq 0 ]; then
+        echo "Successfully linked $home_wallpapers_dir to dotfile dir $dotfiles_wallpapers_dir"
+    else
+        echo "Failed to link $home_wallpapers_dir to $dotfiles_wallpapers_dir. Aborting."
+        exit 1
     fi
 }
 
