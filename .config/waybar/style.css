@@ -1,4 +1,5 @@
 @import url("../../.config/colors.css");
+
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: JetBrainsMono Nerd Font;
@@ -45,11 +46,13 @@ label:focus {
  * Align with sway window inner gaps
  */
 
-.modules-left, .modules-center, .modules-right {
+.modules-left,
+.modules-center,
+.modules-right {
     margin-top: 10px;
 }
 
-.modules-left { 
+.modules-left {
     margin-left: 10px;
 }
 
@@ -88,7 +91,7 @@ label:focus {
 }
 
 #workspaces button.visible {
-    background-color: #4b5261; 
+    background-color: #4b5261;
     border-radius: 3px;
     box-shadow: none;
 }
@@ -135,7 +138,9 @@ label:focus {
     color: @red;
 }
 
-#cpu, #memory, #temperature {
+#cpu,
+#memory,
+#temperature {
     min-width: 55px;
     margin: 0;
     padding: 0;
@@ -149,7 +154,7 @@ label:focus {
 #temperature {
     padding-right: 5px;
 }
-    
+
 #temperature.critical {
     color: @red;
 }
@@ -160,11 +165,11 @@ label:focus {
     padding-right: 8px;
 }
 
-#tray > .passive {
+#tray>.passive {
     -gtk-icon-effect: dim;
 }
 
-#tray > .needs-attention {
+#tray>.needs-attention {
     -gtk-icon-effect: highlight;
     background-color: @red;
 }
