@@ -12,7 +12,7 @@ SELECTED=$(echo -e $OPTION_STRING | wofi --dmenu -k /dev/null -c $HOME/.config/w
 
 case $SELECTED in
     "")
-    hyprctl dispatch exit
+    hyprctl dispatch 'hl.dsp.exit()'
     ;;
     "")
     systemctl suspend
