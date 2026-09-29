@@ -18,8 +18,8 @@
         "custom/system"
     ],
     "hyprland/workspaces": {
-        "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({workspace=\"m+1\"})'",
-        "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({workspace=\"m-1\"})'",
+        "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({workspace=\"m-1\"})'",
+        "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({workspace=\"m+1\"})'",
         "persistent-workspaces": {
             "1": [],
             "2": [],
@@ -141,8 +141,8 @@
 	"custom/system"
     ],
     "hyprland/workspaces": {
-        "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({workspace=\"m+1\"})'",
-        "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({workspace=\"m-1\"})'",
+        "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({workspace=\"m-1\"})'",
+        "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({workspace=\"m+1\"})'",
         "persistent-workspaces": {
             "6": [],
             "7": [],
